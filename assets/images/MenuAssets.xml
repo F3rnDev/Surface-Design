@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MenuAssets.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Continue0000" x="0" y="0" width="82" height="16"/>
+	<SubTexture name="Continue0001" x="82" y="0" width="82" height="16"/>
+	<SubTexture name="Continue0002" x="164" y="0" width="82" height="16"/>
+	<SubTexture name="Continue0003" x="0" y="16" width="82" height="16"/>
+	<SubTexture name="Continue idle0000" x="0" y="0" width="82" height="16"/>
+	<SubTexture name="Exit0000" x="82" y="16" width="49" height="16"/>
+	<SubTexture name="Exit0001" x="131" y="16" width="49" height="16"/>
+	<SubTexture name="Exit0002" x="180" y="16" width="49" height="16"/>
+	<SubTexture name="Exit0003" x="0" y="32" width="49" height="16"/>
+	<SubTexture name="Exit idle0000" x="82" y="16" width="49" height="16"/>
+	<SubTexture name="New Game0000" x="49" y="32" width="87" height="16"/>
+	<SubTexture name="New Game0001" x="136" y="32" width="87" height="16"/>
+	<SubTexture name="New Game0002" x="0" y="48" width="87" height="16"/>
+	<SubTexture name="New Game0003" x="87" y="48" width="87" height="16"/>
+	<SubTexture name="New Game idle0000" x="49" y="32" width="87" height="16"/>
+	<SubTexture name="Options0000" x="174" y="48" width="70" height="16"/>
+	<SubTexture name="Options0001" x="0" y="64" width="70" height="16"/>
+	<SubTexture name="Options0002" x="70" y="64" width="70" height="16"/>
+	<SubTexture name="Options0003" x="140" y="64" width="70" height="16"/>
+	<SubTexture name="Options idle0000" x="174" y="48" width="70" height="16"/>
+</TextureAtlas>
