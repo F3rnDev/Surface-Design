@@ -32,6 +32,12 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
+		//setup
+		FlxG.autoPause = false;
+		#if !debug
+		FlxG.mouse.visible = false;
+		#end
+
 		// Block the options until the tween is finished
 		blockOpt = true;
 
