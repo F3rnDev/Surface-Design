@@ -28,8 +28,16 @@ class PlayState extends FlxState
 
 	var bg:FlxSprite;
 
+	var blockOpt:Bool;
+
 	override public function create()
 	{
+		// Block the options until the tween is finished
+		blockOpt = true;
+
+		//make it Fullscreen Baby
+		FlxG.fullscreen = true;
+
 		// Adding the bg
 		bg = new FlxSprite(-1793, 0).loadGraphic("assets/images/Complete padron 1st.png", false);
 		bg.setGraphicSize(Std.int(bg.width * 6));
@@ -56,7 +64,12 @@ class PlayState extends FlxState
 			// doing the tween
 			new FlxTimer().start(2.2, function(tmr:FlxTimer)
 			{
-				FlxTween.tween(menuBox, {y: 130 + (110 * i)}, 2, {ease: FlxEase.expoOut});
+				FlxTween.tween(menuBox, {y: 130 + (110 * i)}, 1.5, {ease: FlxEase.expoOut, 
+					onComplete: function(twn:FlxTween){
+						blockOpt = false;
+						changeOption();
+					}
+				});
 			});
 		}
 
@@ -144,14 +157,23 @@ class PlayState extends FlxState
 		}
 
 		// let's change da options now :)
-		if (FlxG.keys.anyJustPressed([UP, W]))
+		if (FlxG.keys.anyJustPressed([UP, W]) && !blockOpt)
 		{
 			changeOption(-1);
 		}
 
-		if (FlxG.keys.anyJustPressed([DOWN, S]))
+		if (FlxG.keys.anyJustPressed([DOWN, S]) && !blockOpt)
 		{
 			changeOption(1);
+		}
+
+		// exit the game when pressing on exit button
+		if (FlxG.keys.justPressed.ENTER && menuArray[curSelected] == 'Exit')
+		{
+			FlxG.camera.fade(FlxColor.BLACK, 1, false, function()
+			{
+				System.exit(0);
+			});
 		}
 
 		// some program commands
@@ -184,7 +206,7 @@ class PlayState extends FlxState
 		{
 			spr.animation.play('idle');
 
-			if (spr.ID == curSelected)
+			if (spr.ID == curSelected && !blockOpt)
 			{
 				spr.animation.play('selected');
 			}
