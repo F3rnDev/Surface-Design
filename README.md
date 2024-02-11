@@ -5,12 +5,8 @@
 This is a college project in which we had to create a surface design pattern for a product. The theme for the pattern was "Brazil", be it's culture or nature. The product choosen was a game main menu, while the toucan was the chosen animal for the pattern.
 
 ## Project Development
-
- ***
- ## Index:
  #### 1. [Pattern](#pattern)
  #### 2. [Product](#product)
- ***
 
 <div id="development"></div>
 
